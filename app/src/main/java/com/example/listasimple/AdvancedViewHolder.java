@@ -32,6 +32,11 @@ implements View.OnClickListener{
     Log.d(TAG,"en el const , equipos: "+ listaEsquipos.getSize());
     view.setOnClickListener(this);
   }
+  public void setDato(Equipo e){
+    nombreEquipo.setText(e.getNombrEquipo());
+    nombreDivision.setText(e.getDvivisionEquipo());
+    logotipo.setImageResource(e.getLogotipoResource());
+  }
 
   @Override
   public void onClick(View v) {

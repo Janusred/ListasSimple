@@ -31,7 +31,11 @@ RecyclerView.ViewHolder viewHolder= new AdvancedViewHolder(
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+   Equipo equipo = listaEquipos.getEquipo(position);
+   Log.d(TAG,"Equipo elejdo"+ equipo.getNombrEquipo());
+   AdvancedViewHolder equipoViewHolder = (AdvancedViewHolder) viewHolder;
+   equipoViewHolder.setDato(equipo);
 
     }
 
