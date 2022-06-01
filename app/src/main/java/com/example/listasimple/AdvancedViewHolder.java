@@ -11,7 +11,7 @@ package com.example.listasimple;
 public class AdvancedViewHolder extends RecyclerView.ViewHolder
 implements View.OnClickListener{
 
-git 
+
   private String nombreString;
   private String divisionString;
   private TextView nombreEquipo;
@@ -35,6 +35,10 @@ git
 
   @Override
   public void onClick(View v) {
-
+  int position = getAdapterPosition();
+  Equipo e = listaEsquipos.getEquipo(position);
+  nombreString= e.getNombrEquipo();
+  divisionString=e.getDvivisionEquipo();
+  Log.d(TAG,"onClick elemento seleccionado"+ nombreString);
   }
 }
