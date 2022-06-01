@@ -7,9 +7,9 @@
     tools:context=".AdvancedListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/advanced_reciclerview"
+        android:id="@+id/advanced_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scrolbars="vertical"/>
+        android:scrolbars="vertical" />
 
 </FrameLayout>
