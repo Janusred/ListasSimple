@@ -1,6 +1,7 @@
 package com.example.listasimple;
 
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -22,7 +23,11 @@ public class AdvancedAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHold
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+RecyclerView.ViewHolder viewHolder= new AdvancedViewHolder(
+        LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.layout_equipo, parent ,false),
+                  listaEquipos);
+        return viewHolder;
     }
 
     @Override
